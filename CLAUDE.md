@@ -53,6 +53,19 @@ Ruby is 2.6.10; al-folio's pinned `al_folio_core`/`al_folio_cv`/etc. gems need s
 rbenv/asdf/Docker was available when this fork was set up) — treat `deploy.yml`'s run on GitHub as the
 build check. Pages deploys are atomic: if a build fails, the previously-deployed version stays live.
 
+Two real deploy incidents from the initial al-folio migration, both fixed, worth knowing about:
+- First push failed at "Setup Python" — `actions/setup-python`'s `cache: "pip"` needs a
+  requirements.txt/pyproject.toml present just to compute a cache key, even though the only actual
+  install in this workflow is `pip3 install --upgrade nbconvert` (not `-r requirements.txt`).
+  `requirements.txt` (containing just `nbconvert`) must stay even though nothing greps for it.
+- The repo's Pages source was still "Deploy from a branch: main" (leftover from the pre-al-folio site,
+  which didn't need Jekyll at all and shipped its own `.nojekyll`) instead of `gh-pages`, so pushes were
+  silently building successfully to the `gh-pages` branch while the live site kept serving a stale
+  cached build from `main`. Fixed by switching Settings → Pages → Branch to `gh-pages`. Once on
+  `gh-pages`, GitHub's native Pages Jekyll processing was *also* running a second time over the
+  already-rendered al-folio output (no `.nojekyll` in the pushed `_site`), which took an unusually long
+  time — `deploy.yml` now does `touch _site/.nojekyll` right before the deploy step to skip that.
+
 ## Legacy assets recovered from an even older site
 
 `assets/legacy/` has real photos/logos (UNICORN Racing team + car, an advisor photo, F1TENTH Grand Prix
