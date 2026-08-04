@@ -1,259 +1,278 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeongsang Ryu</title>
-    <meta name="author" content="Jeongsang Ryu">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  </head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav" id="stickyNav">
+        <div class="nav-container">
+            <div class="nav-brand">Jeongsang Ryu</div>
+            <ul class="nav-links">
+                <li><a href="#profile" data-section="profile">About</a></li>
+                <li><a href="#news" data-section="news">News</a></li>
+                <li><a href="#projects" data-section="projects">Projects</a></li>
+                <li><a href="#cv" data-section="cv">CV</a></li>
+                <li><a href="#etc" data-section="etc">ETC</a></li>
+            </ul>
+            <button class="nav-theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
+    <div class="container">
+        <!-- Header -->
+        <header class="profile" id="profile">
+            <div class="profile-content">
+                <div class="profile-image">
+                    <img src="assets/img/prof_pic.jpg" alt="Jeongsang Ryu">
+                </div>
+                <div class="profile-info">
+                    <h1>Jeongsang Ryu</h1>
+                    <p class="description">
+                        I'm a PhD candidate in the Department of Mechanical Engineering at <a href="https://www.unist.ac.kr/">UNIST</a>,
+                        advised by Professor Kwon in the <a href="https://hmcl-unist.github.io/">High-Assurance Mobility and Control Lab (HMCL)</a>.
+                        My research focuses on <em>robust perception and autonomy systems that operate reliably in real-world conditions</em>,
+                        validated through high-stakes environments like autonomous racing competitions.
+                        I'm the founder of <a href="https://hmcl-unist.github.io/unicorn-racing/">UNICORN Racing</a>, our lab's autonomous racing team (est. 2025).
+                    </p>
+                    <div class="links">
+                        <a href="mailto:ryujs@unist.ac.kr"><i class="fas fa-envelope"></i> Email</a>
+                        <a href="mailto:jeongsangryu@gmail.com"><i class="fas fa-envelope"></i> Gmail</a>
+                        <a href="assets/pdf/cv.pdf"><i class="fas fa-file-pdf"></i> CV</a>
+                        <a href="https://github.com/jeongsang-ryu"><i class="fab fa-github"></i> Github</a>
+                        <a href="tools/"><i class="fas fa-wrench"></i> Tools</a>
+                    </div>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
 
-          <!-- Header -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Jeongsang Ryu
-                </p>
-                <p>
-                  I am a PhD candidate at <a href="https://www.unist.ac.kr/">UNIST</a> in the High-Assurance Mobility and Control Lab (<a href="https://hmcl-unist.github.io/">HMCL</a>), advised by Professor Kwon.
-                  My research focuses on building robust perception and autonomy systems that operate reliably in real-world conditions, validated through high-stakes environments like autonomous racing competitions.
-                  I am the founder of <a href="https://hmcl-unist.github.io/unicorn-racing/">UNICORN Racing</a>, our lab's autonomous racing team (est. 2025).
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:ryujs@unist.ac.kr">Email</a> &nbsp;/&nbsp;
-                  <a href="mailto:jeongsangryu@gmail.com">Gmail</a> &nbsp;/&nbsp;
-                  <a href="assets/pdf/cv.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/jeongsang-ryu">Github</a> &nbsp;/&nbsp;
-                  <a href="tools/">Tools</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="assets/img/prof_pic.jpg">
-              </td>
-            </tr>
-          </tbody></table>
+        <!-- News -->
+        <section class="news" id="news">
+            <h2>News</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <span class="date">[2025]</span>
+                    <span class="content"><i class="fas fa-trophy" style="color: #f59e0b; margin-right: 4px;"></i>2nd Place, 24th RoboRacer Autonomous Racing Competition (ICRA, Atlanta) &mdash; Team Leader</span>
+                </div>
+                <div class="news-item">
+                    <span class="date">[2024]</span>
+                    <span class="content"><i class="fas fa-trophy" style="color: #f59e0b; margin-right: 4px;"></i>8th Place, 2024 MOTIE Competition &mdash; GNSS + IMU state estimation, LiDAR integration</span>
+                </div>
+                <div class="news-item">
+                    <span class="date">[2024]</span>
+                    <span class="content"><i class="fas fa-chalkboard-teacher" style="color: #3b82f6; margin-right: 4px;"></i>Referee &amp; Organizer for two F1TENTH/RoboRacer competitions (Jeju, Incheon)</span>
+                </div>
+                <div class="news-item">
+                    <span class="date">[2023]</span>
+                    <span class="content"><i class="fas fa-trophy" style="color: #f59e0b; margin-right: 4px;"></i>1st Place, 2nd F1TENTH Korea Championship (ICCAS, Yeosu) &mdash; Localization, Raceline Optimization</span>
+                </div>
+            </div>
+        </section>
 
-          <!-- Research -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I'm interested in <span class="highlight">SLAM</span>, LiDAR-inertial odometry, autonomous racing, end-to-end autonomous driving, reinforcement learning, and robot perception &mdash; mostly validated through autonomous racing competitions and field robotics.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
+        <!-- Projects -->
+        <section class="research" id="projects">
+            <h2>Projects</h2>
+            <p class="section-intro">
+                SLAM, LiDAR-inertial odometry, autonomous racing, end-to-end autonomous driving, reinforcement learning, and robot perception &mdash;
+                mostly validated through autonomous racing competitions and field robotics.
+            </p>
 
-          <!-- News -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>News</h2>
-                <ul class="news-list">
-                  <li><span class="news-date">2025</span> <a href="https://hmcl-unist.github.io/unicorn-racing/posts/2025-icra-roboracer-2nd-place/">2nd Place</a>, 24th RoboRacer Autonomous Racing Competition (ICRA, Atlanta) &mdash; Team Leader.</li>
-                  <li><span class="news-date">2024</span> <a href="https://hmcl-unist.github.io/gallery/2024/motie-competition/">8th Place</a>, 2024 MOTIE Competition &mdash; GNSS + IMU state estimation, LiDAR integration.</li>
-                  <li><span class="news-date">2023</span> <a href="https://hmcl-unist.github.io/unicorn-racing/posts/2023-iccas-korea-championship-1st-place/">1st Place</a>, 2nd F1TENTH Korea Championship (ICCAS, Yeosu) &mdash; Localization, Raceline Optimization.</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody></table>
+            <div class="papers">
+                <div class="paper highlighted">
+                    <div style="width:260px; height:180px; border-radius:8px; background:#1a1a1a; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:600; text-align:center;">UNICORN<br>Racing</div>
+                    <div class="paper-content">
+                        <h3><a href="https://hmcl-unist.github.io/unicorn-racing/">UNICORN Racing</a></h3>
+                        <div class="authors">
+                            <strong>UNIST's autonomous racing team</strong>, est. 2025 &mdash; founder
+                        </div>
+                        <div class="venue">F1TENTH / RoboRacer</div>
+                        <div class="links">
+                            <a href="https://hmcl-unist.github.io/unicorn-racing/"><i class="fas fa-globe"></i> team site</a>
+                            <a href="https://github.com/HMCL-UNIST/unicorn-racing-stack"><i class="fab fa-github"></i> code</a>
+                        </div>
+                        <p class="tldr">1st place, F1TENTH Korea Championship 2023 (ICCAS); 2nd place, RoboRacer Autonomous Racing Competition 2025 (ICRA).</p>
+                    </div>
+                </div>
 
-          <!-- Projects -->
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td colspan="2" style="padding:16px 16px 0 16px;">
-                <h2>Projects</h2>
-              </td>
-            </tr>
+                <div class="paper">
+                    <img src="https://img.youtube.com/vi/qivD2N3cMXw/hqdefault.jpg" alt="UNIST Autonomous Shuttle Bus">
+                    <div class="paper-content">
+                        <h3><a href="https://www.youtube.com/watch?v=qivD2N3cMXw&t=34s">UNIST Autonomous Shuttle Bus</a></h3>
+                        <div class="authors">
+                            From Development to Self-Driving
+                        </div>
+                        <div class="links">
+                            <a href="https://www.youtube.com/watch?v=qivD2N3cMXw&t=34s"><i class="fab fa-youtube"></i> video</a>
+                        </div>
+                        <p class="tldr">My contribution: multi-LiDAR calibration &amp; LiDAR localization. Sensors: 2&times; Ouster OS1-128, 1&times; Livox HAP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <a href="https://hmcl-unist.github.io/unicorn-racing/">
-                  <div style="width:100%;aspect-ratio:1/1;border-radius:8px;background:#1a1a1a;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Lato',sans-serif;font-size:13px;text-align:center;padding:8px;">UNICORN<br>Racing</div>
-                </a>
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://hmcl-unist.github.io/unicorn-racing/">
-                  <span class="papertitle">UNICORN Racing</span>
-                </a>
-                <br>
-                <em>UNIST's autonomous racing team</em>, est. 2025
-                <p></p>
-                <p>
-                  1st place, F1TENTH Korea Championship 2023 (ICCAS); 2nd place, RoboRacer Autonomous Racing Competition 2025 (ICRA).
-                </p>
-                <a href="https://hmcl-unist.github.io/unicorn-racing/">team site</a>
-                /
-                <a href="https://github.com/HMCL-UNIST/unicorn-racing-stack">code</a>
-              </td>
-            </tr>
+        <!-- Publications -->
+        <section class="research" id="publications" style="background: var(--bg-secondary);">
+            <h2>Publications</h2>
+            <p class="section-intro" style="margin-bottom: 0;">None yet.</p>
+        </section>
 
-            <tr>
-              <td style="padding:16px;width:20%;vertical-align:middle">
-                <a href="https://www.youtube.com/watch?v=qivD2N3cMXw&t=34s">
-                  <img src="https://img.youtube.com/vi/qivD2N3cMXw/hqdefault.jpg" width="100%" style="border-radius:8px;">
-                </a>
-              </td>
-              <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://www.youtube.com/watch?v=qivD2N3cMXw&t=34s">
-                  <span class="papertitle">UNIST Autonomous Shuttle Bus</span>
-                </a>
-                <br>
-                <em>From Development to Self-Driving</em>
-                <p></p>
-                <p>
-                  My contribution: multi-LiDAR calibration &amp; LiDAR localization. Sensors: 2&times; Ouster OS1-128, 1&times; Livox HAP.
-                </p>
-                <a href="https://www.youtube.com/watch?v=qivD2N3cMXw&t=34s">video</a>
-              </td>
-            </tr>
-          </tbody></table>
+        <!-- CV: Education & Experience -->
+        <section class="news" id="cv">
+            <h2>Education</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <span class="date">2024&ndash;present</span>
+                    <span class="content"><strong>Combined MS/PhD, Mechanical Engineering</strong>, UNIST &mdash; High-Assurance Mobility and Control Lab (HMCL)</span>
+                </div>
+                <div class="news-item">
+                    <span class="date">2018&ndash;2024</span>
+                    <span class="content"><strong>BS, Mechanical Engineering</strong>, UNIST &mdash; GPA 3.75 / 4.3</span>
+                </div>
+            </div>
 
-          <!-- Publications -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Publications</h2>
-                <p style="color:#888;">None yet.</p>
-              </td>
-            </tr>
-          </tbody></table>
+            <h2 style="margin-top: 40px;">Experience</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <span class="date">2023&ndash;2024</span>
+                    <span class="content"><strong>Undergraduate Research Intern</strong>, High-Assurance Mobility and Control Lab, UNIST &mdash; F1TENTH autonomous racing: motion planning, control, ROS-based simulation and real vehicle testing</span>
+                </div>
+                <div class="news-item">
+                    <span class="date">2021&ndash;2022</span>
+                    <span class="content"><strong>Undergraduate Research Intern</strong>, Clean Combustion &amp; Energy Research Lab, UNIST &mdash; NN models for chemical kinetics simulation; flame stabilization/extinction (Python, TensorFlow, OpenFOAM)</span>
+                </div>
+                <div class="news-item">
+                    <span class="date">2019&ndash;2020</span>
+                    <span class="content"><strong>Military Service</strong>, Republic of Korea Army</span>
+                </div>
+            </div>
+        </section>
 
-          <!-- Education -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Education</h2>
-                <ul class="entry-list">
-                  <li>
-                    <span class="entry-date">Mar 2024 &ndash; present</span>
-                    <span class="entry-body"><strong>Combined MS/PhD, Mechanical Engineering</strong>, UNIST <span class="entry-sub">&mdash; High-Assurance Mobility and Control Lab (HMCL)</span></span>
-                  </li>
-                  <li>
-                    <span class="entry-date">Mar 2018 &ndash; Feb 2024</span>
-                    <span class="entry-body"><strong>BS, Mechanical Engineering</strong>, UNIST <span class="entry-sub">&mdash; GPA 3.75 / 4.3</span></span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody></table>
+        <!-- ETC Section -->
+        <section class="etc" id="etc">
+            <h2>ETC</h2>
+            <div class="etc-grid">
+                <div class="etc-card">
+                    <h3 style="background: linear-gradient(135deg, #60a5fa, #3b82f6);">Teaching</h3>
+                    <ul>
+                        <li>Instructor, <a href="https://hmcl-unist.github.io/gallery/2026/2026-ifac-bootcamp/">2026 IFAC RoboRacer Bootcamp</a> (<a href="https://hmcl-unist.github.io/unicorn-racing/wiki/2026-tutorial/">tutorial materials</a>)</li>
+                        <li>Teaching Assistant, MEN472: Creating Autonomous Car, UNIST (2025, 2026)</li>
+                        <li>Teaching Assistant, MEN491: Creating Autonomous Car, UNIST (2024)</li>
+                        <li>Teaching Assistant, <a href="https://hmcl-unist.github.io/gallery/2023/f1-tenth-bootcamp/">2023 Korea F1TENTH Tutorial</a></li>
+                    </ul>
+                </div>
+                <div class="etc-card">
+                    <h3 style="background: linear-gradient(135deg, #93c5fd, #60a5fa);">Service</h3>
+                    <ul>
+                        <li>Referee &amp; Organizer, 29th RoboRacer Autonomous Racing Competition &mdash; IFAC, Busan (2026)</li>
+                        <li>Referee &amp; Organizer, RoboRacer PNU-Hyunsong Championship &mdash; Busan (2026)</li>
+                        <li>Referee &amp; Organizer, 4th F1TENTH Korea Championship &mdash; ICCAS, Incheon (2025)</li>
+                        <li>Referee &amp; Organizer, 3rd F1TENTH Korea Championship &mdash; ICCAS, Jeju (2024)</li>
+                        <li>Referee, 18th RoboRacer Autonomous Racing Competition &mdash; IV, Jeju (2024)</li>
+                    </ul>
+                </div>
+                <div class="etc-card">
+                    <h3 style="background: linear-gradient(135deg, #1e3a8a, #1e40af);">Skills</h3>
+                    <ul>
+                        <li>Languages: C++, Python, Swift</li>
+                        <li>Frameworks &amp; Tools: ROS / ROS2, Isaac Sim, Isaac Lab, ARKit, PyTorch, Docker</li>
+                        <li>Platforms: Linux, iOS</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-          <!-- Experience -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Experience</h2>
-                <ul class="entry-list">
-                  <li>
-                    <span class="entry-date">Aug 2023 &ndash; Feb 2024</span>
-                    <span class="entry-body"><strong>Undergraduate Research Intern</strong>, High-Assurance Mobility and Control Lab, UNIST <span class="entry-sub">&mdash; F1TENTH autonomous racing: motion planning, control, ROS-based simulation and real vehicle testing</span></span>
-                  </li>
-                  <li>
-                    <span class="entry-date">Mar 2021 &ndash; Nov 2022</span>
-                    <span class="entry-body"><strong>Undergraduate Research Intern</strong>, Clean Combustion &amp; Energy Research Lab, UNIST <span class="entry-sub">&mdash; NN models for chemical kinetics simulation; flame stabilization/extinction (Python, TensorFlow, OpenFOAM)</span></span>
-                  </li>
-                  <li>
-                    <span class="entry-date">Apr 2019 &ndash; Nov 2020</span>
-                    <span class="entry-body"><strong>Military Service</strong>, Republic of Korea Army</span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody></table>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Jeongsang Ryu</p>
+        </footer>
+    </div>
 
-          <!-- Teaching -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Teaching</h2>
-                <ul class="entry-list">
-                  <li>
-                    <span class="entry-date">2026</span>
-                    <span class="entry-body"><strong>Instructor</strong>, <a href="https://hmcl-unist.github.io/gallery/2026/2026-ifac-bootcamp/">2026 IFAC RoboRacer Bootcamp</a> (<a href="https://hmcl-unist.github.io/unicorn-racing/wiki/2026-tutorial/">tutorial materials</a>)</span>
-                  </li>
-                  <li>
-                    <span class="entry-date">Mar&ndash;Jun 2026</span>
-                    <span class="entry-body"><strong>Teaching Assistant</strong>, MEN472: Creating Autonomous Car, UNIST</span>
-                  </li>
-                  <li>
-                    <span class="entry-date">Mar&ndash;Jun 2025</span>
-                    <span class="entry-body"><strong>Teaching Assistant</strong>, MEN472: Creating Autonomous Car, UNIST</span>
-                  </li>
-                  <li>
-                    <span class="entry-date">Mar&ndash;Jun 2024</span>
-                    <span class="entry-body"><strong>Teaching Assistant</strong>, MEN491: Creating Autonomous Car, UNIST</span>
-                  </li>
-                  <li>
-                    <span class="entry-date">2023</span>
-                    <span class="entry-body"><strong>Teaching Assistant</strong>, <a href="https://hmcl-unist.github.io/gallery/2023/f1-tenth-bootcamp/">2023 Korea F1TENTH Tutorial</a></span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody></table>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.querySelector('.theme-toggle i');
+            const navThemeToggle = document.querySelector('.nav-theme-toggle i');
+            const currentTheme = body.getAttribute('data-theme');
 
-          <!-- Service -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Service</h2>
-                <ul class="entry-list">
-                  <li>
-                    <span class="entry-date">2026</span>
-                    <span class="entry-body"><strong>Referee, Organizer</strong>, 29th RoboRacer Autonomous Racing Competition &mdash; IFAC, Busan</span>
-                  </li>
-                  <li>
-                    <span class="entry-date">2026</span>
-                    <span class="entry-body"><strong>Referee, Organizer</strong>, RoboRacer PNU-Hyunsong Championship &mdash; Busan</span>
-                  </li>
-                  <li>
-                    <span class="entry-date">2025</span>
-                    <span class="entry-body"><strong>Referee, Organizer</strong>, 4th F1TENTH Korea Championship &mdash; ICCAS, Incheon</span>
-                  </li>
-                  <li>
-                    <span class="entry-date">2024</span>
-                    <span class="entry-body"><strong>Referee, Organizer</strong>, 3rd F1TENTH Korea Championship &mdash; ICCAS, Jeju</span>
-                  </li>
-                  <li>
-                    <span class="entry-date">2024</span>
-                    <span class="entry-body"><strong>Referee</strong>, 18th RoboRacer Autonomous Racing Competition &mdash; IV, Jeju</span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody></table>
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                themeToggle.className = 'fas fa-moon';
+                if (navThemeToggle) navThemeToggle.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeToggle.className = 'fas fa-sun';
+                if (navThemeToggle) navThemeToggle.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
 
-          <!-- Skills -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Skills</h2>
-                <p>
-                  <strong>Languages:</strong> C++, Python, Swift<br>
-                  <strong>Frameworks &amp; Tools:</strong> ROS / ROS2, Isaac Sim, Isaac Lab, ARKit, PyTorch, Docker<br>
-                  <strong>Platforms:</strong> Linux, iOS
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
+        function smoothScroll(targetId) {
+            const element = document.getElementById(targetId);
+            if (element) {
+                const headerOffset = 80;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+            }
+        }
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;text-align:center;color:#888;font-size:12px;">
-                &copy; 2026 Jeongsang Ryu
-              </td>
-            </tr>
-          </tbody></table>
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                smoothScroll(targetId);
+            });
+        });
 
-        </td>
-      </tr>
-    </tbody></table>
-  </body>
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('stickyNav');
+            const scrollTop = window.pageYOffset;
+            if (scrollTop > 100) {
+                nav.classList.add('visible');
+            } else {
+                nav.classList.remove('visible');
+            }
+        });
+
+        const observerOptions = { root: null, rootMargin: '-20% 0px -60% 0px', threshold: 0 };
+        const observer = new IntersectionObserver((entries) => {
+            let currentSection = null;
+            entries.forEach(entry => {
+                if (entry.isIntersecting) currentSection = entry.target.id;
+            });
+            if (currentSection) {
+                document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+                const activeLink = document.querySelector(`[data-section="${currentSection}"]`);
+                if (activeLink) activeLink.classList.add('active');
+            }
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            ['profile', 'news', 'projects', 'cv', 'etc'].forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) observer.observe(section);
+            });
+
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.querySelector('.theme-toggle i');
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                themeToggle.className = 'fas fa-sun';
+                const navThemeToggle = document.querySelector('.nav-theme-toggle i');
+                if (navThemeToggle) navThemeToggle.className = 'fas fa-sun';
+            }
+        });
+    </script>
+</body>
 </html>
