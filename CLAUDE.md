@@ -69,4 +69,12 @@ for what's there and ideas for where it could go (a `_projects/` entry, a `_news
 `.github/workflows/*` except `deploy.yml` (dropped: axe, broken-links\*, codeql, copilot-setup-steps,
 deploy-docker-tag, deploy-image, docker-slim, lighthouse-badger, prettier\*, release, star-history,
 unit-tests, upgrade-check, update-screenshots, update-tocs, visual-regression, render-cv,
-update-citations). `requirements.txt` was removed since nothing left references it.
+update-citations).
+
+`requirements.txt` (`nbconvert` only) looked dead after removing `render-cv.yml`/`update-citations.yml`
+(nothing runs `pip install -r requirements.txt` anymore) and was deleted -- **this broke the live
+deploy**: `deploy.yml`'s `actions/setup-python@v5` step has `cache: "pip"`, which needs a
+requirements.txt/pyproject.toml present just to compute a cache key, even though the only actual
+install in that workflow is `pip3 install --upgrade nbconvert` (not `-r requirements.txt`). Restored
+with just `nbconvert` in it. Lesson: grep the `.github/workflows/*.yml` cache configs too, not just
+`pip install -r` call sites, before deleting a requirements file.
